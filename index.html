@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tab Switching Layout</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .tab-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .tab-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-right: 100px;
+    cursor: pointer;
+  }
+  .tab-button:hover {
+    background-color: #0056b3;
+  }
+  .tab {
+    display: none;
+    padding: 20px 0;
+  }
+  .tab.active {
+    display: block;
+  }
+  .product-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    /* padding: 10px; */
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 30%;
+    margin-right: 2%;
+    vertical-align: top;
+  }
+  .product-card h2 {
+    margin-top: 0;
+  }
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .product-card p {
+    margin-bottom: 10px;
+  }
+  .add-to-cart {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  .add-to-cart:hover {
+    background-color: #218838;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1 style="font-size: 24px; text-transform: uppercase; text-align: center;">select your choice</h1>
+  <div class="tab-buttons">
+    <button class="tab-button" onclick="openTab('men')">Men</button>
+    <button class="tab-button" onclick="openTab('women')">Women</button>
+    <button class="tab-button" onclick="openTab('kids')">Kids</button>
+  </div>
+
+  <div id="menTab" class="tab active">
+    <!-- Product Cards for Men -->
+    <div class="product-card">
+      <img src="https://assets.ajio.com/medias/sys_master/root/20231214/ALYD/657ad760afa4cf41f5cffafd/-288Wx360H-465634623-navy-MODEL.jpg" alt="Men's Product 1">
+      <h2>Men's Product 1</h2>
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Price: $50</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://assets.ajio.com/medias/sys_master/root/20231214/ALYD/657ad760afa4cf41f5cffafd/-288Wx360H-465634623-navy-MODEL.jpg" alt="Men's Product 2">
+      <h2>Men's Product 2</h2>
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Price: $60</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://assets.ajio.com/medias/sys_master/root/20231214/ALYD/657ad760afa4cf41f5cffafd/-288Wx360H-465634623-navy-MODEL.jpg" alt="Men's Product 3">
+      <h2>Men's Product 3</h2>
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Price: $70</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://assets.ajio.com/medias/sys_master/root/20231214/ALYD/657ad760afa4cf41f5cffafd/-288Wx360H-465634623-navy-MODEL.jpg" alt="Men's Product 1">
+      <h2>Men's Product 1</h2>
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Price: $50</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://assets.ajio.com/medias/sys_master/root/20231214/ALYD/657ad760afa4cf41f5cffafd/-288Wx360H-465634623-navy-MODEL.jpg" alt="Men's Product 2">
+      <h2>Men's Product 2</h2>
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Price: $60</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://assets.ajio.com/medias/sys_master/root/20231214/ALYD/657ad760afa4cf41f5cffafd/-288Wx360H-465634623-navy-MODEL.jpg" alt="Men's Product 3">
+      <h2>Men's Product 3</h2>
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Price: $70</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+
+  <div id="womenTab" class="tab">
+    <!-- Product Cards for Women -->
+    <div class="product-card">
+      <img src="https://assets.myntassets.com/h_480,q_100,w_360/v1/assets/images/11702930/2020/7/3/7473c802-72e3-421f-a0ac-1dfff012437d1593778847608-ONLY-Women-Dresses-4881593778846443-1.jpg" alt="Women's Product 1">
+      <h2>Women's Product 1</h2>
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Price: $40</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://assets.myntassets.com/h_480,q_100,w_360/v1/assets/images/11702930/2020/7/3/7473c802-72e3-421f-a0ac-1dfff012437d1593778847608-ONLY-Women-Dresses-4881593778846443-1.jpg" alt="Women's Product 2">
+      <h2>Women's Product 2</h2>
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Price: $55</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://assets.myntassets.com/h_480,q_100,w_360/v1/assets/images/11702930/2020/7/3/7473c802-72e3-421f-a0ac-1dfff012437d1593778847608-ONLY-Women-Dresses-4881593778846443-1.jpg" alt="Women's Product 3">
+      <h2>Women's Product 3</h2>
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Price: $65</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://assets.myntassets.com/h_480,q_100,w_360/v1/assets/images/11702930/2020/7/3/7473c802-72e3-421f-a0ac-1dfff012437d1593778847608-ONLY-Women-Dresses-4881593778846443-1.jpg" alt="Women's Product 1">
+      <h2>Women's Product 1</h2>
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Price: $40</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://assets.myntassets.com/h_480,q_100,w_360/v1/assets/images/11702930/2020/7/3/7473c802-72e3-421f-a0ac-1dfff012437d1593778847608-ONLY-Women-Dresses-4881593778846443-1.jpg" alt="Women's Product 2">
+      <h2>Women's Product 2</h2>
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Price: $55</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://assets.myntassets.com/h_480,q_100,w_360/v1/assets/images/11702930/2020/7/3/7473c802-72e3-421f-a0ac-1dfff012437d1593778847608-ONLY-Women-Dresses-4881593778846443-1.jpg" alt="Women's Product 3">
+      <h2>Women's Product 3</h2>
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Price: $65</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+
+  <div id="kidsTab" class="tab">
+    <!-- Product Cards for Kids -->
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/614qHDhUs-L._AC_SL1049_.jpg" alt="Kid's Product 2">
+      <h2>Kid's Product 2</h2>
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+     
+      <p>Price: $30</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/614qHDhUs-L._AC_SL1049_.jpg" alt="Kid's Product 2">
+      <h2>Kid's Product 2</h2>
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Price: $45</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/614qHDhUs-L._AC_SL1049_.jpg" alt="Kid's Product 3">
+      <h2>Kid's Product 3</h2>
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Price: $55</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/614qHDhUs-L._AC_SL1049_.jpg" alt="Kid's Product 3">
+      <h2>Kid's Product 3</h2>
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Price: $30</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/614qHDhUs-L._AC_SL1049_.jpg" alt="Kid's Product 2">
+      <h2>Kid's Product 2</h2>
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Price: $45</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/614qHDhUs-L._AC_SL1049_.jpg" alt="Kid's Product 3">
+      <h2>Kid's Product 3</h2>
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Price: $55</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function openTab(tabName) {
+    var i, tabContent, tabButtons;
+    tabContent = document.getElementsByClassName("tab");
+    for (i = 0; i < tabContent.length; i++) {
+      tabContent[i].classList.remove("active");
+    }
+    document.getElementById(tabName + "Tab").classList.add("active");
+  }
+</script>
+
+</body>
+</html>
